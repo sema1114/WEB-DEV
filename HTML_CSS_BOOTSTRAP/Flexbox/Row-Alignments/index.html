@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    display: flex;
+    flex-wrap:wrap;
+    /*align-content:flex-start;hizalamatı üstten yapıyor*/
+    /*align-content:flex-end;hizalamatı alttan yapıyor*/
+    /*align-content:center;hizalamatı ortala yapıyor*/
+    /*align-content: space-between;eşit aralıklarla hizalama*/
+    /*align-content: space-around;satırlardan eşit aralılarla satırları böl*/
+    align-content: space-evenly;/*heryerden eşit bırak*/
+    background-color: #f2f2f2;
+    height: 1000px;
+    padding:15px;
+
+}
+
+.item{
+    background-color: chocolate;
+    padding:30px;
+    margin:30px;
+    color: #fff;
+    font-size: 25px;
+}
+
+.i8{
+flex:1;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="item">item 1</div>
+    <div class="item">item 2 </div>
+    <div class="item">item 3</div>
+    <div class="item">item 4</div>
+    <div class="item">item 5</div>
+    <div class="item">item 6</div>
+    <div class="item">item 7</div>
+    <div class="item i8">item 8</div>
+</div>
+    
+</body>
+</html>

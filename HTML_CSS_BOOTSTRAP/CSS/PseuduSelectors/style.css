@@ -1,0 +1,104 @@
+/*Pseudo Element*/
+p::first-line{
+    font-weight: bold;
+    color: fuchsia;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+p.about::first-line{
+color: darkblue;    
+}
+
+p::first-letter{
+    font-size: 48px;
+}
+
+p::after{
+    content:"";
+    padding:10px;
+  background-color: mediumaquamarine;
+    display: block;/*bu element tam satır kaplar*/
+}
+
+p.about::first-line{
+    color: lightblue
+    ;
+}
+
+
+
+
+/*Pseudo Class*/
+ul li {
+    padding:10px;
+    margin-bottom: 10px;
+
+list-style:none;
+}
+
+
+
+
+
+
+ul li:first-child{
+
+    background-color: green;
+
+}
+
+ul li:last-child{
+background-color: mediumvioletred;}
+
+
+/*listedeki çift elemanlar*/
+ul li:nth-of-type(even){
+border: 2px solid blue;
+
+}
+/*Her bir eleamın tek sırada olan seçimi*/
+ul li:nth-of-type(odd){
+    border: 12px solid peru;
+
+}
+
+a{
+    padding: 5px 8px;
+    text-decoration: none;
+    display: block;
+    width:80px;
+    margin-bottom: 10px;
+
+    border:1px solid gray;
+}
+
+a:link{
+color: red;
+}
+/*ziyaret edilmiş*/
+a:visited{
+    color:grey;
+}
+/*imleç üstüne gelince*/
+a:hover{
+    color: white;
+    background: green;
+
+}
+
+a:active{
+color:green;
+background:gold;
+}
+
+span{
+    display: none;
+    background: yellow;
+    padding: 20px;
+}
+div:hover span{
+    display: block;
+
+}
+

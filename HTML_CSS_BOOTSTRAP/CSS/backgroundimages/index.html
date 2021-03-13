@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.header{
+    background: red;
+    background-image:
+    /*resme vereceğimiz opasite özellik kod ve To leftle sola doğru değişiyor renk*/ 
+    linear-gradient(to left bottom,rgba(102,255,102,0.7),rgba(230,255,230,0.7)),
+    url(img/bg.jpeg);
+    height: 95vh;
+    background-size: cover;/*en boy oranı bozmadan sığdır kırp fazlasını*/
+    background-position: top;/*verdiğin pozisyonlara göre daralt küçültürken üssten sabit*/
+  clip-path:polygon(0 0,100% 0,100% 100%,0 87%);
+  position:relative;
+
+}
+.heading{
+    text-transform: uppercase;
+    color:white;
+    position: absolute;/*başlığın sınırlarından başlayarak bir konumlandırma yapılacak*/
+    top:50%;
+    left:50%;
+    text-align: center;
+    transform:translate(-50%,-50%);/*nesnenin ters olarak yatayda ve dikeyde boşluk ayarlama*/
+}
+
+.heading-main{
+    display: block;
+font-size: 50px;
+letter-spacing: 10px;
+}
+
+.heading-sub{
+display: block;
+font-size:30px;
+letter-spacing: 5px;
+}
+
+.logo-box{
+position:absolute;
+top:30px;
+left:40px;
+}
+.logo{
+    height: 50px;
+}
+</style>
+
+
+</head>
+<body>
+    
+
+<header class="header">
+<div class="logo-box">
+    <img class="logo" src="img/logo.png" alt="">
+</div>
+<h1 class="heading"> 
+    <span class="heading-main">Main Title</span>
+    <span class="heading-sub">Sub Title</span>
+</h1>
+
+
+</header>
+
+
+</body>
+</html>

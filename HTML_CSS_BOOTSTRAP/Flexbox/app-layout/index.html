@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Uygulaması</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.header{
+    padding:30px;
+    text-align:center;
+    background-color:#E3A11B;
+    color: white;
+   
+}
+
+.navbar{
+    display:flex;/*block yapmışız gibi etkilendi*/
+    background-color:black;
+}
+
+.navbar a{
+    color: white;
+    padding:16px 20px;
+    text-decoration:none;
+    text-align: center;
+}
+
+.navbar a:hover{
+background-color: #ddd;
+color: #000;
+}
+
+#main{
+ display: flex;
+
+ 
+}
+
+#sidebar{
+    background-color: #f1f1f1;
+    flex:25%;
+    padding:20px;
+    order:1;
+}
+#box{
+    margin-bottom: 20px;
+}
+p{
+    margin:10px 0;
+}
+#content{
+    flex:75%;
+    padding:20px;
+}
+.ph{
+    background-color: #aaa;
+    width: 100%;
+    padding:20px;
+    margin-top:10px;
+
+}
+
+#footer{
+    background-color: #ddd;
+    padding:20px;
+    text-align: center;
+}
+@media screen and (max-width:700px){
+    #main, .navbar{
+        flex-direction: column;
+    }
+    #sidebar{
+        order:-1;/*başa al*/
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div class="header">
+  
+        <h2>Lorem ipsam</h2>
+        <p>lorem ipsam dolor</p>
+ 
+
+</div>
+
+<div class="navbar">
+   <a href="">Link</a>
+   <a href="">Link</a>
+   <a href="">Link</a>
+   <a href="">Link</a>
+
+</div>
+
+<div id="main">
+    <div id="sidebar">
+     <div id="box">
+         <h2>Lorem, ipsum.</h2>
+         <div class="ph" style="height: 200px;"></div>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rerum corporis ullam facere ipsum. Veritatis!</p>
+           
+     </div>
+     <div class="ph" style="height: 50px;"></div>
+     <div class="ph" style="height: 50px;"></div>
+     <div class="ph" style="height: 50px;"></div>
+    </div>
+
+    <div id="content">
+        <div id="box">
+            <h2>Lorem, ipsum.</h2>
+            <div class="ph" style="height: 200px;"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rerum corporis ullam facere ipsum. Veritatis!</p>
+           
+
+            
+        </div>
+
+        <div id="box">
+            <h2>Lorem, ipsum.</h2>
+            <div class="ph" style="height: 200px;"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rerum corporis ullam facere ipsum. Veritatis!</p>
+            
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

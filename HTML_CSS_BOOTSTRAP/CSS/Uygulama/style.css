@@ -1,0 +1,172 @@
+body{
+    font-size: 14px;
+    background-color:#f2f2f2;
+}
+
+h1{
+    border:1px solid purple;
+    padding: 5px;
+}
+h2{
+    color:red;
+}
+
+h2.active {
+    border :2px solid greenyellow;
+
+}
+/*paragraf id sine sahip olan etikette font kalınlığı ver*/
+
+p#paragraf{
+    font-weight: bold;
+
+}
+
+/*div içindeki h3 wtiketlerine gold arka plan ekle*/
+
+div h3{
+    background-color: gold;
+}
+
+/*h1 den sonra gelen aynı seviyedeki tüm p arkaplan red olsun*/
+
+h1~p{
+    background-color: red;
+}
+
+/*div içindeki tüm p etiketlerinin ark planını yeşil yapalınm*/
+
+div>p{
+    background-color:salmon;
+}
+
+/*tüm liste elamanlarına gray border ve margin-top:2px ekle*/
+
+ul li{
+    border: 1px solid gray;
+    margin-top: 2px;/*elemanların üstten 2px boşluk kalsın kutularda*/
+}
+
+/*active sınıfına sahip tüm elemanlara gold arkaplan ekleyin*/
+ul li.active{
+    background-color: gold;
+}
+/*liste elemanlarından ilkinin kelime aralığını  arttır*/
+ul li:first-child{
+    word-spacing: 5px;
+}
+/*liste elemanlarından en sondakinin harf aralığını arttır*/
+
+ul li:last-child{
+    letter-spacing: 5px;
+}
+
+/*liste eleman index i tek olanların yazı rengini yeşil*/
+ul li:nth-child(odd){
+    color: green;
+    font-weight: bold;
+}
+
+/*liste eleman index çift olanların yazı rengini turuncu*/
+
+ul li:nth-child(even){
+    color: orange;
+    font-weight: bold;
+}
+
+/*input nesnelerinden text ve password olanlara  css ekle
+ 
+width<.100%
+padding 12 px 20 px
+margin 8px 0
+box sizing :border-box
+
+
+*/
+input[type="text"],input[type="password"]{
+    width:100%;
+    padding:12px 20px;
+    margin:8px 0;
+    box-sizing:border-box;
+}
+
+/*
+input nesnelerinden type i submit olana aşağıdaki css kodlarını uygul
+
+width:100%
+backround-color:green;
+color:white;
+padding:12px 18px;
+margin:7px 0;
+border:none;
+border-radius:4px;
+cursor:pointer;
+
+
+
+
+*/
+
+input[type="submit"]
+{
+width:100%;
+background-color:green;
+color:white;
+padding: 12px 18px;/*kutuyla yazı arasındaki mesafeler*/
+margin:7px 0;/*üstten alttan 7 ama sağdan soldan boşluk verme*/
+border:none;/*etrafındaki borderı kaldırdık*/
+border-radius:4px;/*kutu etrfındaki keskinlik*/
+cursor:pointer;/*buton üstüne geldiğinde el işaretine çevrilmesi*/
+
+}
+
+/**submiit butonuna hover olayı gerçekleştiğinde akaplan #45a049 yap*/
+input[type="submit"]:hover{
+    background-color: #75a878;
+
+}
+
+/*input kutularından type ı submit olmayanların focus olayı ger.ekleştiğinde arka plan renklerini lightgoldenyellow yap*/
+
+input[type="text"]:focus,input[type="password"]:focus{
+    background-color:lightpink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Inherit</title>
+    <style>
+body{
+    color: brown;
+}
+
+ul{
+    color:red;
+}
+li{
+    color:yellowgreen;
+}
+
+.orange{
+    color: orange !important;
+}
+
+#passive{
+    color:gray;
+    font-size:55px;
+}
+
+a{
+    color:inherit;
+}
+
+span{
+    color:red;
+    border: 1px solid green;
+}
+
+#inherit span{
+    color: inherit;
+}
+
+    </style>
+</head>
+<body>
+
+
+
+    <h1 class="orange">Komple Uygulamalı Web Geliştirme</h1>
+
+<ul>
+    <li id="passive" class="orange">Html5</li>
+    <li>Css</li>
+    <li class="orange">Javascript</li>
+    <li>
+        <a href="#">Jquery</a>
+    </li>
+</ul>
+
+<div id=inheri style="color:aqua;">
+    Lorem ipsum, <span>ben spanın ta kendisiyim</span> sit amet consectetur adipisicing elit. Nihil architecto reprehenderit explicabo quod in. Id, et nostrum. Rem asperiores explicabo repellendus ut dignissimos excepturi itaque harum? Dolorem reprehenderit ipsam maiores.
+</div>
+
+<div style="color: green;">Lorem ipsum <span>al buda span</span> sit amet consectetur adipisicing elit. Iste temporibus tempora quidem, porro veritatis, fuga cupiditate dignissimos minus harum illo quo esse? Quia minima sed, natus aspernatur consequatur aut voluptatum.
+
+</div>
+
+<div>Lorem ipsum <span>bir span dahaadır evlatcım</span> sit amet, consectetur adipisicing elit. Exercitationem odio qui beatae aliquid rem distinctio, ea ex veniam aut a assumenda modi voluptatem accusamus eaque hic illum saepe dolores unde!</div>
+
+    
+</body>
+</html>

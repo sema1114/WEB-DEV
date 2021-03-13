@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selection</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1>Attribute Selectors</h1>
+<p>This paragraph without the title attribute</p>
+<p title="second"></p>
+
+    <p title="third paragraph"> p[title]selects all paragraphs with a title attribute containing the word, little attribute
+    </p>
+
+    <p title="third Paragraph">
+        p[title~="paragraph"] selects all paragraphs with a title attribute contaiing the word,paragraph
+    </p>
+
+<p title="forth paragraph">p[title="#4 paragraph"]selects all paragraphs with a title attribute containing the exact text,#4 paragraph. Matches are case-sensitive and must match letter for letter including whitespace</p>
+
+<p>
+    <a href="http://www.example.com" target="_blank">Example 1</a></p>
+<a href="https:/www.example.net">Example 2</a>
+
+<p>
+    <input type="text" name="Name">
+    <input type="button" value="Button">
+</p>
+
+<img src="" alt="">
+<div id=""
+></div>
+
+</body>
+</html>

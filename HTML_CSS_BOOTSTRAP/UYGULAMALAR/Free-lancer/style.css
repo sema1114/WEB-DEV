@@ -1,0 +1,502 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    /*font-size: 10px; çok önemli bunu masa üstünde kullandık herşey  una göre şekillenecek ilerde*/
+    font-size:6px;/*mobilede uyumlansın diye yaptık*/
+}
+body{
+    
+font-family: 'Lato', sans-serif;
+font-size:1.6rem;
+font-weight: 400;
+line-height: 1.5;
+background-color: #fff;
+
+/*font-family: 'Roboto', sans-serif;*/
+
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+
+
+
+a{
+    text-decoration: none;
+}
+/*clear fix sebei navları yaptıktan sonra sağa sola savruldular ve lacivert kutucuk daraldı öbürleride dışarıda kaldı*/
+
+ul {
+    list-style-type: none;
+}
+
+.img-fluid{/*responsive olarak ayarladık*/
+    max-width:100%;/*kendi dışına çıkmasın */
+    height: auto;
+}
+
+section{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-align: center;
+
+}
+
+
+.btn-large{
+    font-size: 2rem;
+    padding: 2.4rem 1.6rem;
+
+}
+
+.btn{
+    margin-top:4rem;
+    font-weight:400;
+    display: inline-block;/*padding ve margin etki etsin*/
+    border:2px solid transparent;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition:all .5s;
+
+}
+
+/*border radiusu ezmek için btn-social ı btn altına ekledik*/
+.btn-social{
+    width:5rem;
+    height: 5rem;
+    border-radius:50%;
+    font-size:2rem;
+    line-height: 2rem;
+    }
+    
+.btn-outline{
+color:#fff;
+border-color: #fff;
+background-color: transparent;
+
+
+}
+
+.btn-outline:hover{
+    color:#212529;
+    background: #fff;
+}
+
+
+.btn-primary{
+    background-color: #18BC9C;
+    border-color:#18BC9C;
+    color: #fff;
+    padding: 1.2rem 1rem;
+
+}
+
+.btn-primary:hover{
+    background-color: #128f76;
+    border-color:#128f76;
+
+  
+}
+
+
+.clearfix::after{
+content: "";
+display: block;
+clear: both;
+}
+
+.col{
+    float: left;
+    width: 100%;
+    padding: 1rem;
+}
+
+.container{/*telefonlarda*/
+    /*width: 1140px; responsiive kullanışsız*/
+    width:100%;/*responsive için*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+/*576px den aşağısı e kadar container geçerli*/
+
+@media (min-width: 576px){
+    .container{
+        /*kenarlardan boşluk bıraktığım için her zaman düşüğü 18px 18 px sağdan soldan*/
+     max-width:540px;/*  max genişlik 540 px üstüne çıkamasın*/
+     /*18 18 sağa sola böl*/
+    }
+    /*telefonlardan büyüklerde*/
+    html{
+        font-size:7px;/* 2 rem 14 px e*/
+    }
+
+}
+/*576 ve üstünde 768 px e kadar*/
+@media (min-width: 768px){
+    .container{
+     max-width: 720px;
+    }
+
+    html{
+        font-size:8px;/* 2 rem 16 px e*/
+    }
+    
+    .col{
+        width: 50%;/*tablet tabletlerden büyük*/
+    }
+}
+ /*48 px sağdan soldan dağıt*/ 
+@media (min-width: 992px){
+    .container{
+        max-width:960px;
+    }
+
+    html{
+        font-size:9px;/* 2 rem 18 px e*/
+    }
+
+    .col{
+        /*laptoplarda*/
+        width: 33.3%;/*tablet tabletlerden büyük*/
+    }
+}
+/*32*/
+
+@media (min-width: 1200px){
+	.container {
+		max-width: 1140px;
+    }
+    
+    html{
+        font-size:10px;/* 2 rem 20 px e*/
+    }
+}
+
+
+.text-uppercase{
+    text-transform:uppercase;
+}
+
+/*navbar*/
+nav{
+    width:100%;/*fix yapınca satırı olduğu gibi kaplamıyor o yüzden bunuda ekliyoruz*/
+    background-color: #2C3E50;
+    color:#fff;
+    padding-top: 2.4rem;
+    padding-bottom:2.4rem;
+    position: fixed;
+    /*z inex büyük olan eleman her zaman daha üstte görünür bu yüzden*/
+    z-index: 500;/*bu sayede yıldız navbarın üstünde görünmeyecek*/
+}
+
+#logo-box{
+    float: left;
+    padding-top: .5rem;
+}
+
+#logo-box .logo{
+    color:#fff;
+    font-weight: 700;
+    font-size: 3.2rem;
+    font-family: Montserrat;
+
+}
+
+#nav-links{
+    float: right;
+}
+
+#nav-links .nav-item{
+    float: left ;
+    margin:.4rem;
+}
+
+#nav-links .nav-link{
+color:#fff;
+font-size:1.6rem;
+font-weight:700;
+padding:1.6rem;
+display: block;
+letter-spacing:.1rem;
+transition:color .3s;
+
+}
+
+#nav-links .nav-link:hover{
+color:#18bc9c;
+}
+
+#nav-links .nav-icon{
+    display: none;
+}
+
+@media (max-width: 992px){
+
+    #logo-box{
+        float:none;
+        text-align: left;
+    }
+
+    #nav-links{
+        float: none;
+    }
+    /*JAVASCRIPT*/
+/*ilk çocuk dışında (icon dışındakiler)listedekileri*/
+/*responsive-jscr sahipse etkin olsun değilse etkin olmasın */
+#nav-links.responsive-jscr li:not(:first-child){
+display: none;
+}
+
+    #nav-links .nav-link{
+        font-size:2rem;
+        padding-left:0
+    }
+
+    #nav-links .nav-item{
+        float: none ;
+        text-align: left;
+    }
+
+    #nav-links .nav-icon{
+        display:block;
+        position:absolute;
+        top:10px;
+        right: 5px;
+        font-size:3rem;
+    }
+
+}
+
+
+/*header*/
+
+header{
+    background-color: #18bc9c;
+
+    padding-top:calc(112px + 10rem);
+    padding-bottom: 112px;
+    text-align: center;
+
+}
+
+header h1{
+    color: #fff;
+    font-size: 7.6rem;
+}
+
+
+header h2{
+    color: #fff;
+    font-size: 2.8rem;
+    font-family: 'Lato';
+    font-weight: 300;
+}
+
+hr.star-light{
+    border-color: #fff;
+}
+
+hr.star-dark{
+border-color:  #2C3E50;
+}
+
+.star-light, .star-dark{
+    border:none;
+    border-top:.4rem solid;
+    max-width:25rem;
+    height: 0;
+    margin:3rem auto;/*bozuluyor diye 2.5 3 e çıktı*/
+    padding:5px;/*ayrıca padding verdim*/
+    overflow: visible;/*taşmaya izin verdik ve ikonu görebiliyoruz*/
+}
+
+.star-light::after{
+    color:#fff;
+    background-color: #18bc9c;
+
+}
+
+.star-dark::after{
+    color: #2C3E50;
+    background-color: #fff;
+}
+
+
+
+
+.star-light::after, .star-dark::after{
+    content:"\f005";/*font awesomedan aldık unicode*/
+    font-family: "Font Awesome 5 Free";
+  
+    font-weight: 900;/*kalınlığından dolayı içerisi doluyor bebişiiim*/
+    font-size:3rem;/*3.2 den çektik*/
+    position: relative;/*oynatmak istiyoruz bebişş konumunu*/
+    padding:0 8px;
+    top:-3rem;/*-26px den çektik*/
+   
+
+}
+/*portfolio*/
+#portfolio{
+    
+
+
+}
+
+
+#portfolio h2{
+
+font-size:4.8rem;
+color: #2C3E50;
+}
+
+
+.portfolio-item{
+ position: relative/*yapalım ki position absolute e göre konumlandırma*/;
+}
+.portfolio-item img{
+ display:block;/*çünkü alttaki elemanla üstüste gelecek*/
+
+}
+
+.img-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    background: #18BC9C;
+    opacity:0;
+    transition:opacity .5s ease ;
+}
+
+.img-overlay .icon{
+    color:#fff;
+    font-size:2rem;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+}
+
+
+.portfolio-item:hover .img-overlay{
+    opacity:0.8;
+}
+/*about*/
+#about{
+    background-color: #18BC9C;
+    color:#fff;
+
+}
+
+#about h2{
+    font-size:4.8rem;
+}
+
+#about-text{
+    text-align: left;
+}
+
+@media (min-width:992px){
+    
+    #about-text .left{
+        float: left;
+        width: 50%;
+        padding-right: 10px;
+        padding-left: 210px;
+        }
+        
+        #about-text .right{
+        float: right;
+        width: 50%;
+        padding-right: 210px;
+        padding-left: 10px;
+        }
+
+}
+
+
+
+#about-text .text{
+    font-size:2rem;
+
+}
+
+/*contact*/
+
+#contact{
+   
+
+}
+
+#contact h2{
+
+    font-size:4.8rem;
+    color: #2C3E50;
+}
+
+#contact-form{
+    width:70%;
+    margin:0 auto;
+    text-align: left;
+}
+
+.form-group{
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+}
+
+.form-group input,.form-group textarea{
+    border: none;
+    width: 100%;
+    display: block;/*width geçerli olması için */
+    font-size: 2.4rem;
+
+
+}
+
+.form-group input:focus{
+    outline:0;/*üstüne tıkladığımızda ki çerçeveyi kaldırdık*/
+}
+
+
+footer{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background: #2C3E50;
+    color: #fffF;
+}
+
+footer h4{
+    font-size:2.4rem;
+}
+
+footer p{
+    font-size:2rem;
+    margin-top: 1rem;
+}
+footer li{
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.copyright{
+    background: #192431;
+    padding-top:2.4rem;
+    padding-bottom: 2.4rem;
+    color:#fff;
+    text-align: center;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+    margin:0;
+    padding: 0;
+}
+
+.media{
+display: flex; 
+align-items: flex-start;/*yukarı aldım*/
+background-color:#FDEBDC;
+padding:16px;
+max-width: 500px;
+margin:20px;
+border-radius:3px;
+}
+
+.media-object{
+    width:100px;
+    margin-right: 16px;
+}
+
+.media-heading{
+    margin:0 0 0 8px;
+
+}
+.img-right{
+    order:1;/*normal varsayılan 0 olduğu için ters döner */
+}
+
+.media-inner{
+    margin-left:0;
+    padding-right:0;
+}
+
+</style>
+
+</head>
+<body>
+    
+<div class="media">
+    <img class="media-object"src="avatar.png">
+    <div class="media-body">
+        <h3 class="media-heading">Lorem İpsam</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos optio repudiandae esse accusantium animi assumenda, fugiat harum aut quidem ipsam?</p>
+    </div>
+</div>
+
+<div class="media">
+    <img class="media-object img-right"src="avatar.png">
+    <div class="media-body">
+        <h3 class="media-heading">Lorem İpsam</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos optio repudiandae esse accusantium animi assumenda, fugiat harum aut quidem ipsam?</p>
+    </div>
+</div>
+
+<div class="media ">
+    <img class="media-object"src="avatar.png">
+    <div class="media-body">
+        <h3 class="media-heading">Lorem İpsam</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos optio repudiandae esse accusantium animi assumenda, fugiat harum aut quidem ipsam?</p>
+
+        <div class="media media-inner">
+            <img class="media-object"src="avatar.png">
+            <div class="media-body">
+                <h3 class="media-heading">Lorem İpsam</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos sllksalk sklajslajs </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

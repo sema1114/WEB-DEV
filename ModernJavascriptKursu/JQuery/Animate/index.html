@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <title>Document</title>
+
+    <style>
+        #box {
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+    <button id="animate">Animate</button>
+
+    <div id="box">
+Helllooo
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("#animate").click(function () {
+
+                var box = $("#box");
+
+                box.animate({
+
+                    left: '200px',
+                    width: '300px',
+                    height: '300px'
+                }), "fast", alert("animasyon")
+
+             box.animate({fontSize:'50'},3000)
+
+            })
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+/*Group Selectors
+1:(*) --Tüm etiketler
+2:(p) --Tüm paragraf etiketleri
+3:(div p)--Div içindeki tüm p etiketleri
+4:(div,p)--Tüm div ve tüm p etiketleri
+5:(div>p)--Üst etiketi div olan tüm p
+6:(div~div) p ile aynı seviiyede tüm div
+7:(p+div)p etiketinden sonra gelen tüm div
+
+*/
+
+ /* *{
+   border:  1px solid
+}
+*/
+
+/*
+p{
+    border: 1px solid pink;
+} */
+
+/*container altındaki divleri
+.container div{
+    border: 1px solid red;
+}*/
+/*container altındaki divlerden clası box olan
+.container div.box{
+border: 1px solid olivedrab;
+}
+*/
+
+/* (div altındaki p)Sadece conteyner altındaki paragraflar
+div p{
+    border: 1px solid goldenrod;
+}
+*/
+/*Tüm divler tüm boxlar seçili
+div,p{
+    border: 1px solid springgreen;
+}*/
+
+
+/*Divdeki box sınıfının hepsi ve p 
+div.box,p{ border: 1px solid saddlebrown;
+
+}*/
+
+
+
+
+/* p nin bir üst elemanı div olan p ler
+
+div>p{
+    border: 1px solid plum
+}*/
+
+
+/*p ve div elamanı aynı seviye olan divler 
+p~div {
+    border: 1px solid rebeccapurple;
+
+}*/
+
+
+
+
+/*p den sonra gelen ilk div etiketini al
+p+div{
+    border: 1px solid rebeccapurple;
+
+}*/

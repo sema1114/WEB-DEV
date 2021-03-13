@@ -1,0 +1,13 @@
+
+
+/*BU EXTERNAL CSS TİR!*/
+a{
+    color: saddlebrown;
+    text-decoration: none;/*Linklerin altlarını silme*/
+}
+
+li{
+    display: inline;/*linklerin altalta olmasını kaldırıyor*/
+  }
+
+h1{background-color: aqua;}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        margin: 0;
+        padding:0;
+    }
+
+.container{
+ display:flex;/*hepsini küçük kutucuklar olarak hizaadı inline block gibi*/
+/*flex-direction: row-reverse;bunları ters hizaladı*/
+flex-direction: column;/*uzattı
+/*flex-direction: column-reverse;tersten hizaladı*/
+/*flex-wrap: wrap;sığmayan eleman aşağıya  indir*/
+/*flex-wrap: wrap-reverse;sığmayan eleman aşağıya  tersten indir*/
+
+justify-content: center;/* yatayda kutuları çok güzel ortalar ve küçültsen bile ortada kazlır hizalı*/
+
+/*justify-content: flex-end;start başta hizalama end sonda hizalama*/
+
+/*justify-content: space-between;/*güzelce aralarında hizala*/
+
+/* justify-content: space-around;x 2x 2x x boşluk mesafeli*/
+/*justify-content: space-evenly;her yerden eşit aralık*/
+
+
+/*align-items: stretch;varsayılan özellik budur ve hepsi aynı boyda oldu bu sayede*/
+
+/*ama biz center olarak ayarlarsak sadece varsayılan uzunluğu belirli diğerleri sabit*/
+/*align-items:flex-start;hepsi yukarı çıkar*/
+align-items: center;
+/*align-items: flex-end;sona doğru hizalama*/
+
+/*align-items: baseline;içindeki yazıların altını aynı hizada tutar*/
+background-color: #f2f2f2;
+padding:15px;
+
+}
+.item{
+   
+    padding: 30px;
+    margin:30px;
+    background-color: chocolate;
+    color:#fff;
+    font-size: 25px;
+
+}
+.i2{
+    height: 200px;
+}
+.i3{
+    height: 300px;
+}
+.i4{
+    font-size: 60px;
+}
+</style>
+
+
+
+</head>
+<body>
+    
+
+
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item i2">item 2</div>
+        <div class="item i3">item 3</div>
+        <div class="item i4">item 4</div>
+       
+    </div>
+</body>
+</html>

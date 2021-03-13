@@ -1,0 +1,90 @@
+
+
+//Loops in Array & Objects
+
+let cars=['Bmw','Mercedes','Toyota'];
+let people=[
+    {firstname:'Sema',lastName:'Kaya'},
+    {firstname:'Batu',lastName:'Kaya'},
+    {firstname:'Moco',lastName:'Coco'}
+
+];
+
+
+//Arrays
+
+// for(let i=0;i<cars.length;i++){
+//     console.log(cars[i]);
+// }
+
+
+
+//Objects
+
+// for(let i=0;i<people.length;i++)
+// {
+//     console.log(people[i].firstname)
+// }
+
+
+//for-in
+
+//Arrays
+
+
+// for(let i in cars){
+//     console.log(`index:${i} value:${cars[i]}`);
+// }
+
+//Objects
+
+// for(let i in people){
+//  console.log(`index:${i} value:${people[i].firstname} LastName:${people[i].lastName}`);
+// }
+
+
+//foreach
+
+// cars.forEach(function(item){
+// console.log(item);
+// });
+
+
+//Object
+// people.forEach(function(item){
+//     console.log(item);
+// });
+
+
+// people.forEach(function(item){
+//     console.log(item.lastName);
+// });
+
+
+//Değerleri bir diziye döndür daha sonra kullnamak için
+
+
+
+//map: returns an array
+
+
+// for(i=0;i<people.length;i++){
+//     console.log(people[i]);
+// }
+
+//  let val= people.map(function(item){
+//   return item.firstname+' '+item.lastName;
+//  });
+  
+//  console.log(val);
+
+
+let numbers=[1,5,6,8,10];
+
+let num= numbers.map(function(n){
+
+    return n*n;
+});
+
+
+console.log(num);

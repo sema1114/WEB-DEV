@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <title>Methods</title>
+
+    <style>
+        .highlight{
+
+            background-color: yellow;
+        }
+        .green{
+background-color: yellowgreen;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <h1>JQuery Helper Methods</h1>
+    <ul>
+        <li>Jquery Selector</li>
+        <li>JQuery Methods</li>
+        <li>JQuery Animations</li>
+    </ul>
+
+
+
+    <input type="text" id="ad" placeholder="Adınız">
+    <input type="text" id="soyad" class="green" placeholder="Soyadınız">
+    <button type="button" id="kaydet" onclick="adsoyad();">Kaydet</button>
+
+    <script>
+        function adsoyad() {
+            var ad = $("#ad").val();
+            var soyad = $("#soyad").val();
+            console.log("Adınız ve soyadınız:" + ad + " " + soyad);
+            $("#ad").addClass("highlight");
+            $("#soyad").removeClass("green");
+
+
+        }
+
+      // attribüte özelliği değiştirme 
+      // $("img").attr("width","400");
+
+
+        console.log($("h1").text());
+        console.log($("ul li").text());
+
+        $("h1").text("Hello Malatya");
+        console.log($("#tx").val());
+        $("#tx").val("Name namee");
+    </script>
+
+
+</body>
+
+</html>

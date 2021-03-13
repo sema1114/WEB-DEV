@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#">Link</a>
+
+    <h3 id="header">Jquery Dersleri</h3>
+
+    <ul id="liste">
+        <li class="item">Jquery Referance</li>
+        <li>Selectors <a href="#">link</a></li>
+        <li class="item">Jquery Plugins</li>
+    </ul>
+
+    <script>
+        document.getElementById("header").style.color = "red";
+
+        $("#header").css("color", "pink");
+        $("#liste a").css("text-decoration", "none");
+
+
+        var styles={
+            color: "yellow",
+            fontSize:"20px",
+            border:"1px solid red"
+        }
+      
+
+             //JQUERY
+
+      //  $("ul li").css(styles); 
+
+       $("a").css({
+           color:"green",
+           fontSize:"20px",
+           border:"1px solid red"
+       });
+
+        
+
+
+            ///Java Script
+
+//    var listeler=document.querySelectorAll("li");
+//    for(var i=0;i<listeler.length;i++){
+//        listeler[i].style.color="blue";
+//    }    
+
+
+
+    </script>
+
+</body>
+
+</html>
