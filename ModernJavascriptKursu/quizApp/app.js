@@ -65,6 +65,7 @@ function loadQuestion(){
     }else{
         var question=quiz.getQuestion();
         var choices=question.choices;
+        //
         document.querySelector('#question').textContent=question.text;
         
         for(var i=0;i<choices.length;i++){
