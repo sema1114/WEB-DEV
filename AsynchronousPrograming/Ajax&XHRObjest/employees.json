@@ -1,0 +1,23 @@
+[
+    {
+    "firstName" : "Sema",
+    "lastName" : "Kaya",
+    "age"      :19,
+    "retired"  : true
+
+},
+{
+    "firstName" : "Batu",
+    "lastName" : "Kaya",
+    "age"      :19,
+    "retired"  : false
+
+},    {
+    "firstName" : "Moco",
+    "lastName" : "Bayri",
+    "age"      :19,
+    "retired"  : false
+
+}
+
+]
