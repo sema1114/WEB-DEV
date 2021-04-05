@@ -8,12 +8,17 @@ import { Model, TodoItem } from './model';
 })
 export class AppComponent {
    model= new Model();
+   isDisplay=false;
 
    getName(){
+
      return this.model.user;
    }
 
    getItems(){
+    if(this.isDisplay){ // eğer seçildiyse bütün elemanları geriye gönder
+      return this.model.items;
+    }
      return this.model.items.filter(item=>!item.action);
      //item action olmyanları al
    }
