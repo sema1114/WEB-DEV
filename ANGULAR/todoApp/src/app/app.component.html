@@ -7,11 +7,11 @@
     <h3 class="bg-primary text-white p-3">
       [{{getName()}}] To Do List
     </h3>
-  
+
     <div class="input-group">
-      <input type="text" class="form-control">
+      <input type="text" #todoText class="form-control">
       <div class="input-group-append">
-        <button class="btn btn-primary">Add</button>
+        <button class="btn btn-primary" (click)="addItem(todoText.value); todoText.value='';">Add</button>
       </div>
     </div>
 
@@ -37,7 +37,7 @@
               <span *ngSwitchCase="false">
                No
               </span>
-           
+
           </td>
       </tr>
       </tbody>
