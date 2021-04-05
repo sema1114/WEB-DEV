@@ -14,6 +14,4 @@ export class AppComponent {
     {description:"Ders Çalışma", action:"No"}
 
   ];
-
-  
 }
