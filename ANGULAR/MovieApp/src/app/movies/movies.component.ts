@@ -2,9 +2,9 @@ import { Component } from "@angular/core";
 
 @Component({
   selector :'movies', //<movies></movies> eğer '.movies' olursa <div class='movies'> '#movies' olursa <div id='movies'>
-  template :'<h2>Movies</h2>'
+  templateUrl:'movies.component.html',
 })
 
-export class Movies{
+export class MoviesComponent{
 
 }
