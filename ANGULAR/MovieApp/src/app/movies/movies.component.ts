@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Movie } from "../movie";
+import {Movies} from '../movie.datasource'
 
 @Component({
   selector :'movies', //<movies></movies> eğer '.movies' olursa <div class='movies'> '#movies' olursa <div id='movies'>
@@ -11,12 +11,6 @@ export class MoviesComponent{
 
   title='Movie List'
 
-  movie : Movie={
-    id:1,
-    name:'Movie Name'
-  }
+  movies=Movies
 
-  getTitle(){
-    return this.title;
-  }
 }
