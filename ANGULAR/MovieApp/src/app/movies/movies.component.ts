@@ -29,7 +29,11 @@ this.selectedMovie=movie;
  }
 
  getMovies() :void{
-   this.movies=this.movieService.getMovie();
+   this.movieService.getMovie()
+                  .subscribe(movies=>{
+                    this.movies=movies;
+                  })
+                  ;
  }
 
 }
