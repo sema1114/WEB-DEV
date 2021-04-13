@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Movie } from './movie';
 import {Movies} from './movie.datasource';
 import{Observable, of} from 'rxjs';
+import { LoggingService } from './logging.service';
 
 
 
@@ -10,11 +11,13 @@ import{Observable, of} from 'rxjs';
 })
 export class MovieService {
 
-  constructor() { }
+  constructor(private logingService:LoggingService) { }
 
 
 
 getMovie() : Observable<Movie[]>{
+
+  this.logingService.add('MovieService: listening movies');
 
   return of(Movies);
 
