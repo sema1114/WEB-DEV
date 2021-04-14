@@ -22,4 +22,10 @@ getMovie() : Observable<Movie[]>{
   return of(Movies);
 
 }
+
+getMovieone(id):Observable<Movie>{
+this.logingService.add('MovieService: get movie detail by id='+id)
+return of(Movies.find(movie=>movie.id===id));
+}
+
 }
