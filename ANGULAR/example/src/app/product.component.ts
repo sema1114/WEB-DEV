@@ -10,6 +10,24 @@ import { ProductRepository } from "./repository.model";
 export class ProductComponent{
 
 model:ProductRepository=new ProductRepository();
+disabled=true;
 
-product :Product = this.model.getProductsById(1);
+getClasses(id:number):string{
+  let product=this.model.getProductsById(id);
+  return (product.price <=1000 ? "bg-info" : "bg-secondary")+ " m-2 p-2 text-white";
+}
+
+getClassMap(id:number) :Object{
+
+  let product =this.model.getProductsById(id);
+
+  return {
+    "bg-info" :product.price<=1000,
+    "bg-secondary" :product.price>1000,
+    "text-center text-white" : product.name == "Samsung S6",
+
+
+  }
+}
+
 }
