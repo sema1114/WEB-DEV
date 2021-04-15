@@ -1,3 +1,4 @@
+import { ThrowStmt } from "@angular/compiler";
 import { Component } from "@angular/core";
 import { Movie } from "../movie";
 import {MovieService} from '../movie.service';
@@ -35,5 +36,19 @@ this.selectedMovie=movie;
                   })
                   ;
  }
+
+ add(name:string,imageUrl:string,description:string):void{
+this.movieService.add({
+  name,
+  imageUrl,
+  description
+} as Movie).subscribe(movie=> this.movies.push(movie));
+ }
+
+ delete(movie:Movie):void{
+   this.movies=this.movies.filter(m=>m!==movie);
+   this.movieService.delete(movie).subscribe();
+ }
+
 
 }
