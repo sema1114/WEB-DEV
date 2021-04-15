@@ -12,14 +12,10 @@ export class ProductComponent{
 model:ProductRepository=new ProductRepository();
 
 
-onSubmit($event){
-  $event.stopPropagation();
-console.log("Button was clicked");
-console.log($event);
-}
+onKeyUp(email){
 
-onDivClicked(){
-console.log('div was clicked');
+   console.log(email);
+
 }
 
 }
