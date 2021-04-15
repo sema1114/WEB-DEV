@@ -29,5 +29,15 @@ getClassMap(id:number) :Object{
 
   }
 }
+ color :string =this.model.getProductsById(1).price<=1000 ? "green":"red";
+ fontSize :string="25px";
+
+ getStyles(id:number){
+   let product=this.model.getProductsById(id);
+   return{
+     fontSize:"25px",
+     color:product.price<=1000 ? "green" :"red"
+   }
+ }
 
 }
