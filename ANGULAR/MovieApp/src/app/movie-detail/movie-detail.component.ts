@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
+import {Location} from '@angular/common'
 
 @Component({
   selector: 'movie-detail',
@@ -15,7 +16,8 @@ export class MovieDetailComponent implements OnInit {
 
   constructor(
     private movieService:MovieService,
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    private location:Location
     ) { }
 
   ngOnInit() {
@@ -27,4 +29,12 @@ export class MovieDetailComponent implements OnInit {
   this.movieService.getMovieone(id)
   .subscribe(movie=>this.movie=movie);
   }
+
+  save():void{
+this.movieService.update(this.movie)
+.subscribe( ()=>{
+this.location.back();
+});
+  }
+
 }

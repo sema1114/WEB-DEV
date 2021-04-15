@@ -1,4 +1,4 @@
-//import { Movie } from "./movie";
+import { Movie } from "./movie";
 
  //export const Movies: Movie[]=[
 // {id :1 ,name:"Movie 1",description:"Güzel Film",imageUrl:"1.jpg"},
