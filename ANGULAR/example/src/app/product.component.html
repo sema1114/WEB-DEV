@@ -1,20 +1,2 @@
 
-<ng-template [ngTemplateOutlet]="productList"
-[ngTemplateOutletContext]="{pro: model.getProducts()}">
-</ng-template>
-<ng-template [ngTemplateOutlet]="productList">
-  [ngTemplateOutletContext]="{pro: model.getLatestProducts(),cat:model.getProducts()}">
-
-</ng-template>
-
-
-
-<ng-template #productList let-products="pro" let-categories="cat">
-  <div class="m-5">
-    <ul class="list-group mt-2">
-      <li *ngFor="let product of products" class="list-group-item">
-      {{product.name}}
-
-    </ul>
-    </div>
-</ng-template>
+<input type="text" appInputEmail>
