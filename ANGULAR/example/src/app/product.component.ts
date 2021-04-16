@@ -4,14 +4,27 @@ import { ProductRepository } from "./repository.model";
 
 @Component({
   selector:"app",
-  template:`
-   {{text | summary:5}}
-  `,
+  templateUrl:"product.component.html",
   styleUrls:["product.component.css"]
 })
 export class ProductComponent{
 
-text='lorem ipsam dolor color molorr hohoho,lorem lorem lorocum mucum';
+model :ProductRepository=new ProductRepository();
 
+productName:string=this.model.getProductsById(1).name;
+
+
+addProduct(){
+  this.model.addProduct(new Product(8,"Samsung S8","İyi telefon","1.jpg",9000)
+  )
+}
+
+deleteProduct(product:Product){
+ this.model.deleteProduct(product);
+}
+
+updateProduct(product:Product){
+product.name="updated";
+}
 
 }
