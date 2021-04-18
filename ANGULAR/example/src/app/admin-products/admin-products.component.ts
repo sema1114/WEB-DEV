@@ -12,7 +12,7 @@ export class AdminProductsComponent {
 
   products;
   model:ProductRepository;
-  selectedProduct:string;
+  selectedProduct:Product;
 
   constructor() {
   this.model=new ProductRepository();
@@ -21,8 +21,24 @@ export class AdminProductsComponent {
   }
 
   getSelected(product:Product):boolean{
-    return product.name==this.selectedProduct;
+    return product==this.selectedProduct;
   }
+
+  editProduct(product:Product){
+    this.selectedProduct=product;
+
+  }
+
+  SaveChanges(){
+   const p=this.model.getProductsById(this.selectedProduct.id);
+   p.name=this.selectedProduct.name;
+   p.description=this.selectedProduct.description;
+   p.price=this.selectedProduct.price;
+   p.imageUrl=this.selectedProduct.imageUrl;
+   this.selectedProduct=null;
+
+  }
+
 
 
 
