@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import { stat } from "fs";
 import { Product } from "./product.model";
 import { ProductRepository } from "./repository.model";
 
@@ -21,6 +22,38 @@ addProduct(p:Product){
 
   console.log('New Product:' +this.JsonProduct)
 }
+
+log(x){
+  console.log(x);
+}
+
+getValidationErrors(state: any){
+  let ctrlName: string =state.name;
+  let messages: string[] =[];
+
+  if(state.errors){
+    for(let errorName in state.errors){
+      switch(errorName){
+        case "required":
+          messages.push(`You must enter a ${ctrlName}`);
+          break;
+          case "minlength":
+            messages.push(`Min. 3 characters for ${ctrlName}`);
+            break;
+             case "pattern":
+            messages.push(`${ctrlName} contains illegal character`);
+            break;
+
+      }
+    }
+  }
+  return messages;
+
+}
+
+
+
+
 
 
 
