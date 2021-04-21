@@ -11,20 +11,43 @@ export class ProductComponent{
 
 model :ProductRepository=new ProductRepository();
 
-productName:string=this.model.getProductsById(1).name;
+newProduct: Product = new Product();
 
-
-addProduct(){
-  this.model.addProduct(new Product(8,"Samsung S8","İyi telefon","1.jpg",9000)
-  )
+get JsonProduct(){
+  return JSON.stringify(this.newProduct);
 }
 
-deleteProduct(product:Product){
- this.model.deleteProduct(product);
+addProduct(p:Product){
+
+  console.log('New Product:' +this.JsonProduct)
 }
 
-updateProduct(product:Product){
-product.name="updated";
-}
+
+
+
+
+
+
+
+
+
+
+
+
+// productName:string=this.model.getProductsById(1).name;
+
+
+// addProduct(){
+//   this.model.addProduct(new Product(8,"Samsung S8","İyi telefon","1.jpg",9000)
+//   )
+// }
+
+// deleteProduct(product:Product){
+//  this.model.deleteProduct(product);
+// }
+
+// updateProduct(product:Product){
+// product.name="updated";
+// }
 
 }
