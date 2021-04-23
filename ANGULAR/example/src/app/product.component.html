@@ -4,7 +4,10 @@
   <div class="row">
     <div class="col-8">
       <div class="m-3">
-        <form #form="ngForm" (ngSubmit)="submitForm(form)">
+         <form #form="ngForm" (ngSubmit)="submitForm(form)"> <!--//bir problem varsa invalid true olur ve formSubmit true dur -->
+          <div class="bg-danger text-white p-3 my-2" *ngIf="formSubmitted && form.invalid">
+           Bir hata oluştu bilgilerinizi kontrol ediniz..
+          </div>
         <div class="bg-info text-white m-2 p-2">
         {{JsonProduct}}
         </div>
@@ -12,7 +15,7 @@
         <div class="form-group">
           <label>Name</label>
         <input required minlength="3" maxlength="10" pattern="^[A-Za-z ]+$"[(ngModel)]="newProduct.name" type="text" name="name" #name="ngModel" class="form-control" (change)="log(name)">
-         <div class="alert alert-danger" *ngIf="!name.valid && name.touched">
+         <div class="alert alert-danger" *ngIf="(formSubmitted || name.dirty) && name.invalid">
           <p *ngFor="let error of getValidationErrors(name)">
            {{error}}
           </p>

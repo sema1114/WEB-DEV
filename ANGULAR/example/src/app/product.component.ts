@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import { NgForm } from "@angular/forms";
 //import { stat } from "fs";
 import { Product } from "./product.model";
 import { ProductRepository } from "./repository.model";
@@ -27,8 +28,20 @@ log(x){
   console.log(x);
 }
 
-submitForm(form){
-console.log(form);
+formSubmitted:boolean=false;
+
+submitForm(form:NgForm){
+this.formSubmitted=true;//form Submit edilmiş
+
+  if(form.valid){ //true ysa demekki bize validation işlemi gelmemiş
+  this.addProduct(this.newProduct);
+  this.newProduct= new Product();//new product girilen bilgilerden temizlenir
+  form.reset();//kullanıcının forma firdiği bilgiler resetlenir(formun içinden bilgi girmemiş olursun)
+  this.formSubmitted=false; //Formu bir sonraki giriş için formu hazırlamış oluyoruz
+
+  }
+
+
 }
 
 getValidationErrors(state: any){
