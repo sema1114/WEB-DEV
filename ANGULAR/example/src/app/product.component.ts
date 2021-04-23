@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import { stat } from "fs";
+//import { stat } from "fs";
 import { Product } from "./product.model";
 import { ProductRepository } from "./repository.model";
 
@@ -25,6 +25,10 @@ addProduct(p:Product){
 
 log(x){
   console.log(x);
+}
+
+submitForm(form){
+console.log(form);
 }
 
 getValidationErrors(state: any){
