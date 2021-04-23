@@ -74,7 +74,13 @@
 
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button
+         type="submit"
+          [disabled]="formSubmitted && form.invalid"
+          [class.btn-secondary]="formSubmitted && form.invalid" class="btn btn-primary"> <!--form submit edildiğinde -->
+
+            Submit
+        </button>
       </form>
        </div>
     </div>
