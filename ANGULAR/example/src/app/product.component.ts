@@ -31,6 +31,7 @@ log(x){
 formSubmitted:boolean=false;
 
 submitForm(form:NgForm){
+  console.log(form);
 this.formSubmitted=true;//form Submit edilmiş
 
   if(form.valid){ //true ysa demekki bize validation işlemi gelmemiş
@@ -44,8 +45,28 @@ this.formSubmitted=true;//form Submit edilmiş
 
 }
 
-getValidationErrors(state: any){
-  let ctrlName: string =state.name;
+getFormValidationErrors(form:NgForm):string[]{
+
+  let messagess:string[]=[];
+
+  Object.keys(form.controls).forEach(k=>{
+    console.log(k); //name
+    console.log(form.controls[k]);//FormControl(name)
+
+    this.getValidationErrors(form.controls[k],k)
+    .forEach(message=>messagess.push(message))
+  })
+
+
+
+  return messagess;
+
+}
+
+
+
+getValidationErrors(state: any,key:string){
+  let ctrlName: string =state.name || key;
   let messages: string[] =[];
 
   if(state.errors){
@@ -56,10 +77,10 @@ getValidationErrors(state: any){
           break;
           case "minlength":
             messages.push(`Min. 3 characters for ${ctrlName}`);
-            break;
-             case "pattern":
+          break;
+          case "pattern":
             messages.push(`${ctrlName} contains illegal character`);
-            break;
+           break;
 
       }
     }
