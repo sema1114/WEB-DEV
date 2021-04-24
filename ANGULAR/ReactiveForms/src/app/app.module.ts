@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { ProductComponent } from './product.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,8 @@ import { ProductComponent } from './product.component';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [ProductComponent]
