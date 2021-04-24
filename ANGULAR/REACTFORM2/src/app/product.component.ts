@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-  title = 'REACTFORM2';
+
+
+name =new FormControl('Samsung S6');
+description = new FormControl('İyi telefon');
+price =new FormControl(1000);
+imageUrl=new FormControl('1.jpg');
+
+
 }
