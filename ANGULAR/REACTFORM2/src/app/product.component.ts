@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,13 +10,23 @@ export class ProductComponent {
 
 productForm = new FormGroup({
 
-  name :new FormControl('Samsung S6'),
-  description : new FormControl('İyi telefon'),
-  price :new FormControl('1000'),
-  imageUrl:new FormControl('1.jpg')
+  name :new FormControl(''
+  ,[
+    Validators.required,
+    Validators.minLength(5),
+    Validators.maxLength(20)
+  ]
+  ),
+  description : new FormControl('',Validators.required),
+  price :new FormControl('',Validators.required),
+  imageUrl:new FormControl('',Validators.required)
 
 });
 
+
+get name(){
+  return this.productForm.get('name');
+}
 onSubmit(){
   console.log(this.productForm.value);
 }
