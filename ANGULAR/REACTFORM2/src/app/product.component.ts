@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ImageValidators } from './image.validators';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,11 @@ productForm = new FormGroup({
   ),
   description : new FormControl('',Validators.required),
   price :new FormControl('',Validators.required),
-  imageUrl:new FormControl('',Validators.required)
+  imageUrl:new FormControl('',[
+    Validators.required,
+    ImageValidators.isValidExtension
+
+  ])
 
 });
 
@@ -27,6 +32,10 @@ productForm = new FormGroup({
 get name(){
   return this.productForm.get('name');
 }
+get imageUrl(){
+  return this.productForm.get('imageUrl');
+}
+
 onSubmit(){
   console.log(this.productForm.value);
 }
